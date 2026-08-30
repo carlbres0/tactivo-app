@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <!-- maximum-scale/user-scalable do NOT stop iOS Safari's focus zoom: it has
+       ignored both since iOS 10 (QA saw the trap again with them shipped). The
+       font-size floor below is what actually stops it; these stay only to keep
+       desktop and Android from scaling a fixed-size canvas app. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="description" content="Plan, run and share football training sessions.">
+  <meta name="theme-color" content="#0B0F10">
+
+  <!-- iOS home-screen install: Safari only delivers web push to an installed PWA. -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tactivo">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>Tactivo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #0B0F10;
+      overscroll-behavior: none;
+    }
+    /* iOS Safari zooms the whole page whenever a focused input's font is under
+       16px, and Flutter styles its hidden editing input from the widget's own
+       text style — ours are 14-15px, so every tap into a field zoomed. The
+       engine makes the body position:fixed, so a zoomed page has nothing to
+       pinch back out against: QA had to refresh to escape. The input is
+       invisible (Flutter paints the text itself), so a 16px floor costs
+       nothing on screen. !important beats the engine's inline `font`. */
+    input, textarea {
+      font-size: 16px !important;
+    }
+    /* Shown until the Flutter engine paints its first frame. Removed by the
+       engine taking over the body, so it needs no JS of its own. The mark is
+       the brand's slashed T as inline SVG: it enters once (a scale-settle,
+       like the floodlights snapping on), then breathes, with a light sweep
+       across the face every few seconds. */
+    #boot {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0B0F10;
+    }
+    #boot svg {
+      width: 108px;
+      height: 108px;
+      animation: enter .6s cubic-bezier(.16, 1, .3, 1) both,
+                 breathe 2.2s ease-in-out .6s infinite;
+    }
+    #boot .sheen {
+      animation: sweep 2.8s ease-in-out .9s infinite;
+    }
+    @keyframes enter {
+      from { transform: scale(.7); opacity: 0; }
+      to   { transform: scale(1);  opacity: 1; }
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: .72; }
+    }
+    @keyframes sweep {
+      0%   { transform: translateX(-500px) skewX(-18deg); }
+      45%, 100% { transform: translateX(1500px) skewX(-18deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #boot svg, #boot .sheen { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="boot">
+    <svg viewBox="0 0 1000 1000" role="img" aria-label="Tactivo">
+      <defs>
+        <mask id="tmask">
+          <path fill="#fff" d="M180 81 L978 81 L838 273 L589 273 L589 715
+                               L360 917 L360 360 L567 125 L455 273 L24 273 Z"/>
+        </mask>
+        <linearGradient id="sheengrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0"   stop-color="#FFFFFF" stop-opacity="0"/>
+          <stop offset=".5"  stop-color="#FFFFFF" stop-opacity=".55"/>
+          <stop offset="1"   stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path fill="#C8F323" d="M180 81 L978 81 L838 273 L589 273 L589 715
+                              L360 917 L360 360 L567 125 L455 273 L24 273 Z"/>
+      <g mask="url(#tmask)">
+        <rect class="sheen" x="0" y="0" width="220" height="1000"
+              fill="url(#sheengrad)"/>
+      </g>
+    </svg>
+  </div>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
