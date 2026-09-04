@@ -1,0 +1,30 @@
+{
+  "v": 1,
+  "durationMs": 8000,
+  "area": {"x": 110, "y": 70, "w": 100, "h": 60},
+  "cones": [[140, 100], [180, 100]],
+  "players": [
+    {"team": "a", "label": "1", "kf": [
+      {"t": 0, "x": 160, "y": 100}, {"t": 0.35, "x": 160, "y": 100},
+      {"t": 0.5, "x": 135, "y": 100}, {"t": 1, "x": 135, "y": 100}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 160, "y": 60}, {"t": 1, "x": 160, "y": 60}
+    ]}
+  ],
+  "ball": {"kf": [
+    {"t": 0, "x": 160, "y": 60}, {"t": 0.35, "x": 160, "y": 60},
+    {"t": 0.5, "x": 135, "y": 100}, {"t": 1, "x": 135, "y": 100}
+  ], "air": []},
+  "routes": [
+    {"kind": "pass", "pts": [[160, 60], [135, 100]]},
+    {"kind": "run", "pts": [[160, 100], [135, 100]]}
+  ],
+  "phases": [
+    {"t": 0, "label": "Ball rolled to one side — keeper starts on the chosen platform."},
+    {"t": 0.3, "label": "Dive to smother: top hand behind the ball, both hands pin it."},
+    {"t": 0.5, "label": "Land on the side — hip, then shoulder — never flat on the front."},
+    {"t": 0.75, "label": "Six each side, then progress from kneeling to standing."}
+  ],
+  "events": []
+}

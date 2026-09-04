@@ -1,0 +1,56 @@
+{
+  "v": 1,
+  "durationMs": 9000,
+  "area": {"x": 20, "y": 30, "w": 240, "h": 140},
+  "cones": [[20, 30], [260, 30], [20, 170], [260, 170]],
+  "goals": [
+    {"x": 20, "y": 100.0, "w": 30, "side": "w"}
+  ],
+  "players": [
+    {"team": "a", "label": "1", "kf": [
+      {"t": 0, "x": 45, "y": 100},
+      {"t": 0.2, "x": 45, "y": 100},
+      {"t": 0.35, "x": 40, "y": 80},
+      {"t": 0.5, "x": 40, "y": 80},
+      {"t": 0.65, "x": 32, "y": 65},
+      {"t": 1, "x": 32, "y": 65}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 60, "y": 80},
+      {"t": 1, "x": 60, "y": 80}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 60, "y": 120},
+      {"t": 1, "x": 60, "y": 120}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 200, "y": 100},
+      {"t": 0.3, "x": 200, "y": 100},
+      {"t": 1, "x": 200, "y": 100}
+    ]}
+  ],
+  "ball": {
+    "kf": [
+      {"t": 0, "x": 200, "y": 100},
+      {"t": 0.3, "x": 200, "y": 100},
+      {"t": 0.45, "x": 60, "y": 80},
+      {"t": 0.6, "x": 32, "y": 65},
+      {"t": 1, "x": 32, "y": 65}
+    ],
+    "air": []
+  },
+  "routes": [
+    {"kind": "shot", "pts": [[200, 100], [60, 80]]},
+    {"kind": "shot", "pts": [[60, 80], [32, 65]]},
+    {"kind": "run", "pts": [[45, 100], [40, 80]]}
+  ],
+  "phases": [
+    {"t": 0, "label": "Shots arrive from 18 metres with bodies blocking the keeper's view."},
+    {"t": 0.2, "label": "Move to find a sight line \u2014 never just guess at the strike."},
+    {"t": 0.45, "label": "Deflections count \u2014 the ball stays live until it's completely dead."},
+    {"t": 0.6, "label": "React to the touch and still make the save."}
+  ],
+  "events": [
+    {"t": 0.45, "x": 60, "y": 80, "label": "DEFLECT"}
+  ]
+}

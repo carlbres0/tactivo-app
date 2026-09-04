@@ -1,0 +1,63 @@
+{
+  "v": 1,
+  "durationMs": 9600,
+  "area": {"x": 20, "y": 30, "w": 260, "h": 140},
+  "cones": [[20, 30], [280, 30], [20, 170], [280, 170]],
+  "goals": [
+    {"x": 20, "y": 100.0, "w": 30, "side": "w"}
+  ],
+  "players": [
+    {"team": "a", "label": "1", "kf": [
+      {"t": 0, "x": 60, "y": 100},
+      {"t": 0.15, "x": 60, "y": 100},
+      {"t": 0.4, "x": 105, "y": 112},
+      {"t": 0.5, "x": 105, "y": 112},
+      {"t": 1, "x": 105, "y": 112}
+    ]},
+    {"team": "a", "label": "2", "kf": [
+      {"t": 0, "x": 180, "y": 70},
+      {"t": 1, "x": 180, "y": 70}
+    ]},
+    {"team": "a", "label": "3", "kf": [
+      {"t": 0, "x": 180, "y": 130},
+      {"t": 1, "x": 180, "y": 130}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 230, "y": 60},
+      {"t": 0.25, "x": 230, "y": 60},
+      {"t": 1, "x": 230, "y": 60}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 180, "y": 115},
+      {"t": 0.1, "x": 180, "y": 115},
+      {"t": 0.45, "x": 118, "y": 114},
+      {"t": 1, "x": 118, "y": 114}
+    ]}
+  ],
+  "ball": {
+    "kf": [
+      {"t": 0, "x": 230, "y": 60},
+      {"t": 0.1, "x": 230, "y": 60},
+      {"t": 0.25, "x": 110, "y": 115},
+      {"t": 0.4, "x": 105, "y": 112},
+      {"t": 0.55, "x": 220, "y": 90},
+      {"t": 1, "x": 220, "y": 90}
+    ],
+    "air": [[0.1, 0.25], [0.5, 0.55]]
+  },
+  "routes": [
+    {"kind": "pass", "pts": [[230, 60], [110, 115]]},
+    {"kind": "run", "pts": [[60, 100], [105, 112]]},
+    {"kind": "opp", "pts": [[180, 115], [118, 114]]},
+    {"kind": "shot", "pts": [[105, 112], [220, 90]]}
+  ],
+  "phases": [
+    {"t": 0, "label": "Line holds high \u2014 the ball is played in behind for the attacker to chase."},
+    {"t": 0.25, "label": "As the pass is struck, decide: come and clear, or drop and set."},
+    {"t": 0.4, "label": "Race won outside the box \u2014 clear first-time with the feet."},
+    {"t": 0.55, "label": "Ten reps, with the defensive line pushing higher each time."}
+  ],
+  "events": [
+    {"t": 0.4, "x": 105, "y": 112, "label": "SWEEP"}
+  ]
+}

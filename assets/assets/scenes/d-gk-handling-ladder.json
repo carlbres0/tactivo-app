@@ -1,0 +1,50 @@
+{
+  "v": 1,
+  "durationMs": 8500,
+  "area": {"x": 120, "y": 55, "w": 90, "h": 90},
+  "cones": [[120, 55], [210, 55], [120, 145], [210, 145]],
+  "goals": [
+    {"x": 118, "y": 100.0, "w": 24, "side": "w"}
+  ],
+  "players": [
+    {"team": "a", "label": "1", "kf": [
+      {"t": 0, "x": 150, "y": 100},
+      {"t": 0.3, "x": 150, "y": 100},
+      {"t": 0.42, "x": 168, "y": 90},
+      {"t": 0.55, "x": 168, "y": 90},
+      {"t": 0.62, "x": 150, "y": 100},
+      {"t": 0.72, "x": 150, "y": 100},
+      {"t": 0.85, "x": 145, "y": 78},
+      {"t": 1, "x": 145, "y": 78}
+    ]},
+    {"team": "d", "label": "x", "kf": [
+      {"t": 0, "x": 195, "y": 100},
+      {"t": 1, "x": 195, "y": 100}
+    ]}
+  ],
+  "ball": {
+    "kf": [
+      {"t": 0, "x": 195, "y": 100},
+      {"t": 0.08, "x": 195, "y": 100},
+      {"t": 0.22, "x": 168, "y": 90},
+      {"t": 0.34, "x": 168, "y": 90},
+      {"t": 0.42, "x": 195, "y": 100},
+      {"t": 0.5, "x": 195, "y": 100},
+      {"t": 0.85, "x": 145, "y": 78},
+      {"t": 1, "x": 145, "y": 78}
+    ],
+    "air": [[0.5, 0.85]]
+  },
+  "routes": [
+    {"kind": "pass", "pts": [[195, 100], [168, 90]]},
+    {"kind": "pass", "pts": [[168, 90], [195, 100]]},
+    {"kind": "pass", "pts": [[195, 100], [145, 78]]}
+  ],
+  "phases": [
+    {"t": 0, "label": "Serves come in a ladder \u2014 rolled, bounced, driven, floated."},
+    {"t": 0.22, "label": "Low ball: cup the scoop, body behind the line of the ball."},
+    {"t": 0.42, "label": "Return it clean and reset feet before the next serve."},
+    {"t": 0.75, "label": "High serve: W-hands take it above the head, pinned to the chest."}
+  ],
+  "events": []
+}
