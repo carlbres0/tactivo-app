@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mind if we repost your drills? — Tactivo</title>
-<meta name="description" content="Mind if we repost your drills? A two-minute read for football content creators: what Tactivo is, what we'd like to do with your posts, and the one-word answer we need.">
+<title>Mind if we share your content? — Tactivo</title>
+<meta name="description" content="Our coaches rate your content, mind if we share it? A two-minute read for football content creators: what Tactivo is, how sharing works, and the one-word answer we need.">
 <meta name="theme-color" content="#0B0F10">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Tactivo">
-<meta property="og:title" content="Mind if we repost your drills?">
-<meta property="og:description" content="Zero effort your end, full credit, a link back to you. A two-minute read for football content creators.">
+<meta property="og:title" content="Our coaches rate your content. Mind if we share it?">
+<meta property="og:description" content="A repost on Tactivo: zero effort your end, full credit, links back to your page, website and socials. A two-minute read for football content creators.">
 <meta property="og:url" content="https://app.tactivo.co.uk/creators/">
 <meta property="og:image" content="https://app.tactivo.co.uk/creators/img/hero-1v1-arrival.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -30,9 +30,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--lime);outline-offse
 .head{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .head img{height:54px;width:auto;display:block;margin-left:-12px}
 .pill{flex:none;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);border:1px solid rgba(200,243,35,.38);padding:6px 11px;border-radius:999px;white-space:nowrap}
-h1{margin:16px 0 8px;font-size:46px;line-height:1.02;font-weight:800;letter-spacing:-.025em;color:var(--text);text-wrap:balance;max-width:620px}
+h1{margin:16px 0 8px;font-size:44px;line-height:1.04;font-weight:800;letter-spacing:-.025em;color:var(--text);text-wrap:balance;max-width:none}
 h1 em{font-style:normal;color:var(--lime)}
-.sub{margin:0;font-size:16.5px;line-height:1.4;color:var(--body);max-width:640px;text-wrap:pretty}
+.sub{margin:0;font-size:16.5px;line-height:1.4;color:var(--body);max-width:700px;text-wrap:pretty}
 .eyebrow{margin:0 0 6px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
 .cols{display:grid;grid-template-columns:1fr 292px;gap:28px;align-items:start;margin-top:18px}
 .what p{margin:0;text-wrap:pretty}
@@ -44,7 +44,7 @@ h1 em{font-style:normal;color:var(--lime)}
 .deal li{position:relative;padding-left:22px;text-wrap:pretty}
 .deal li::before{content:"";position:absolute;left:1px;top:6px;width:11px;height:10px;background:var(--lime);clip-path:polygon(50% 0,100% 100%,0 100%)}
 .deal li b{color:var(--text);font-weight:700}
-.stills{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:330px 104px;gap:10px}
+.stills{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:300px 96px;gap:10px}
 .tile{position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:#0C1113}
 .tile.hero{grid-column:1/-1}
 .tile img{display:block;width:100%;height:100%;object-fit:cover}
@@ -85,6 +85,7 @@ h1 em{font-style:normal;color:var(--lime)}
   .cols{grid-template-columns:1fr;gap:20px;margin-top:20px}
   .stills{order:-1;grid-template-rows:280px 120px}
   h1{margin-top:22px}
+  .brk{display:none}
   .row2{grid-template-columns:1fr;margin-top:18px}
   .yes{grid-template-columns:1fr;gap:14px}
   .btns{grid-template-columns:1fr 1fr}
@@ -100,10 +101,11 @@ h1 em{font-style:normal;color:var(--lime)}
   /* Print is always the A4 two-column layout, whatever width Chrome evaluates the mobile query against. */
   .head img{height:54px;margin-left:-12px}
   .pill{display:inline-block;font-size:10px;padding:6px 11px}
-  h1{font-size:46px;margin:16px 0 8px}
+  h1{font-size:44px;margin:16px 0 8px}
   .sub{font-size:16.5px}
   .cols{grid-template-columns:1fr 292px;gap:28px;margin-top:18px}
-  .stills{order:0;grid-template-rows:330px 104px}
+  .stills{order:0;grid-template-rows:300px 96px}
+  .brk{display:inline}
   .row2{grid-template-columns:1.12fr 1fr;margin-top:16px}
   .yes{grid-template-columns:1fr auto;gap:22px}
   .btns{grid-template-columns:1fr}
@@ -121,17 +123,17 @@ h1 em{font-style:normal;color:var(--lime)}
     <span class="pill">For content creators · 2 minute read</span>
   </header>
 
-  <h1>Mind if we <em>repost</em> your drills?</h1>
-  <p class="sub">It’s exactly what it sounds like: a repost. Zero effort your end, full credit every time, and a link straight back to you.</p>
+  <h1>Our coaches rate your content. <br class="brk">Mind if we <em>share</em> it?</h1>
+  <p class="sub">Coaches on Tactivo keep telling us they like your posts, so we’d love to share them on the app. Zero effort your end, full credit, and links back to you.</p>
 
   <div class="cols">
     <div>
       <section class="what">
         <p class="eyebrow">What Tactivo is</p>
-        <p>We’ve built a game engine that turns coaching drills into 3D animations, so a coach can see a session before they run it. Around it sits a library of drills and sessions that coaches browse when they’re planning. We’d love your content to be in there too.</p>
+        <p>A scrollable feed of drills, like Reels or TikTok, built for coaches. They watch, save what they like and turn it into a session, all for free. The stills here are from our own 3D engine.</p>
         <div class="chips">
           <span class="chip"><b>300+</b> drills in 3D</span>
-          <span class="chip">Engine built in-house</span>
+          <span class="chip">Free for coaches</span>
           <span class="chip">Grassroots first</span>
         </div>
       </section>
@@ -139,9 +141,9 @@ h1 em{font-style:normal;color:var(--lime)}
       <section class="deal">
         <p class="eyebrow">Here’s the deal</p>
         <ul>
-          <li><b>You post as normal.</b> Anything you put on Instagram, TikTok or YouTube can show up on Tactivo too. Nothing extra to make, ever.</li>
-          <li><b>Full credit, every time.</b> Your name, your handle and a link to your page on every post. Want your email or website on there as well? Easy.</li>
-          <li><b>In front of coaches.</b> Your work sits right where coaches are planning their next session, browsable by topic and age group.</li>
+          <li><b>You post as normal.</b> Anything you put on Instagram, TikTok or YouTube can show up in the Tactivo feed too. Nothing extra to make, ever.</li>
+          <li><b>Fully credited, every time.</b> Your name and handle on every post, with links back to your page, website and socials.</li>
+          <li><b>Saved, not just scrolled.</b> Coaches can save your drills and build real sessions out of them.</li>
           <li><b>Still yours.</b> You keep ownership and post wherever you like. Want something taken down? One message and it’s gone.</li>
         </ul>
       </section>
@@ -171,7 +173,7 @@ h1 em{font-style:normal;color:var(--lime)}
       <ul class="road">
         <li><span class="tag">Next</span><span><b>AI coach assistant.</b> Helps coaches plan and adapt a session on the spot.</span></li>
         <li><span class="tag later">Then</span><span><b>Player tracking.</b> Development over a season, not just a session.</span></li>
-        <li><span class="tag later">Always</span><span><b>More creators, more coaches.</b> The library grows with people like you.</span></li>
+        <li><span class="tag later">Always</span><span><b>More creators, more coaches.</b> The feed grows with people like you.</span></li>
       </ul>
     </section>
     <section class="card mission">
@@ -187,14 +189,14 @@ h1 em{font-style:normal;color:var(--lime)}
       <p class="sig">Cheers, Carl &amp; the Tactivo team</p>
     </div>
     <div class="btns">
-      <a class="btn" href="mailto:info@tactivo.co.uk?subject=Yes%2C%20go%20for%20it%20%E2%80%93%20repost%20my%20content%20on%20Tactivo">Yes, go for it</a>
-      <a class="btn ghost" href="mailto:info@tactivo.co.uk?subject=Question%20about%20Tactivo%20reposts">I’ve got a question</a>
+      <a class="btn" href="mailto:info@tactivo.co.uk?subject=Yes%2C%20go%20for%20it%20%E2%80%93%20share%20my%20content%20on%20Tactivo">Yes, go for it</a>
+      <a class="btn ghost" href="mailto:info@tactivo.co.uk?subject=Question%20about%20Tactivo%20sharing%20my%20content">I’ve got a question</a>
     </div>
   </section>
 
   <footer class="foot">
     <span class="brand"><img src="img/tactivo-mark.png" alt="" width="44" height="44"><b>Tactivo</b> · The home for football coaches · app.tactivo.co.uk</span>
-    <span class="fine">Reposts are non-exclusive. Your content stays yours, we credit and link every post, and you can pull anything at any time.</span>
+    <span class="fine">Sharing is non-exclusive. Your content stays yours, we credit and link every post, and you can pull anything at any time.</span>
   </footer>
 </main>
 
